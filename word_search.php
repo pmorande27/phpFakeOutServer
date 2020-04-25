@@ -3,8 +3,8 @@ include 'connexion.php';
 //$word = $_POST['word'];
 $word = "Fact";
 //%word = &_GET['word'];
-$query = "SELECT SOURCE from WhiteList where INFORMATION LIKE '%$word%' ";
-//$query = "SELECT text from TEST where SOURCE CONTAINS '$word' ";
+//$query = "SELECT SOURCE from WhiteList where INFORMATION LIKE '%$word%' ";
+$query = "SELECT SOURCE from WhiteList where INFORMATION CONTAINS '$word' ";
 $result = $connexion -> query($query);
 while($row = mysqli_fetch_assoc($result)){
 	$product[] = array_map('utf8_encode',$row);
