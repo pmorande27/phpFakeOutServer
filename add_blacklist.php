@@ -1,4 +1,6 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+
 include 'connexion.php';
 $url = $_GET['url'];
 //$url= "test";
