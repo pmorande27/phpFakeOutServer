@@ -1,6 +1,6 @@
 <?php
 include 'connexion.php';
-$url = $_POST['url'];
+$url = $_GET['url'];
 //$url= "test";
 //$url = $_GET['url'];
 $Confirmed = 0;
