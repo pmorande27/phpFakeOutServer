@@ -1,7 +1,7 @@
 <?php
 include 'connexion.php';
-//$url = $_POST['url'];
-$url= "hola";
+$url = $_POST['url'];
+//$url= "test";
 //$url = $_GET['url'];
 $Confirmed = 0;
 $query = "INSERT INTO BlackList (LINK,CONFIRMED)VALUES ('$url','$Confirmed')";
