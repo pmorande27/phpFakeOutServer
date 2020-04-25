@@ -4,7 +4,7 @@ include 'connexion.php';
 $url= "hola";
 //$url = $_GET['url'];
 $Confirmed = 0;
-$query = "INSERT INTO BlackList VALUES ('$url','$Confirmed')";
+$query = "INSERT INTO BlackList (LINK,CONFIRMED)VALUES ('$url','$Confirmed')";
 $result = $connexion->query($query);
 if($result){
 	$return = Array();
