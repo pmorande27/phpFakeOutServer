@@ -1,6 +1,8 @@
 <?php
 include 'connexion.php';
-$received_url = $_GET['url'];
+$received_url= "extremereaders.com";
+//$received_url = $_GET['url'];
+
 //$received_url = $_POST['url'];
 //Search in blackList.
 $query = "SELECT * FROM BlackList where LINK = '$url'";
