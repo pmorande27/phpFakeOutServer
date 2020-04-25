@@ -1,6 +1,6 @@
 <?php
 include 'connexion.php';
-$received_url= "extremereaders.com";
+$received_url= "https://www.covid-19facts.com/?p=84180";
 //$received_url = $_GET['url'];
 
 //$received_url = $_POST['url'];
