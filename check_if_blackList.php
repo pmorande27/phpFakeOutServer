@@ -5,9 +5,9 @@ $received_url= "extremereaders.com";
 
 //$received_url = $_POST['url'];
 //Search in blackList.
-$query = "SELECT * FROM BlackList where LINK = '$url'";
+$query = "SELECT * FROM BlackList where LINK = '$received_url'";
 //Search in valid_list.
-$query2 = "SELECT * FROM WhiteList where SOURCE = '$url'";
+$query2 = "SELECT * FROM WhiteList where SOURCE = '$received_url'";
 $result = $connexion -> query($query2);
 
 $result2 = $connexion -> query($query);
