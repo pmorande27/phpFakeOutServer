@@ -1,8 +1,9 @@
 <?php 
 include 'connexion.php';
 //$word = $_POST['word'];
-$word = "Fact";
-//%word = &_GET['word'];
+$word = "edjtgwogrjeoijhoerhgwoighegoirhOGWHRVOLDJIGOIEWJHGOWEHRJOGisdjofgiehwoigfhweoghjoivji";
+$word = $word +" ";
+if (isset($word)){
 $query = "SELECT SOURCE from WhiteList where INFORMATION LIKE '%$word%' ";
 $result = $connexion -> query($query);
 if (!mysqli_fetch_assoc($result)){
@@ -16,6 +17,12 @@ while($row = mysqli_fetch_assoc($result)){
 	echo json_encode ($product);
 
 }
+}
+else{
+	echo json_encode (json_decode ("{}"));
+}
+
+
 
 $connexion->close();
  ?>
