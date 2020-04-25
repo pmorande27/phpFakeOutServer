@@ -2,9 +2,14 @@
 include 'connexion.php';
 
 $received_url = $_GET['url'];
-
+if (!isset($received_url)){
+	$return = Array();
+    $return["success"] = "/";
+    echo json_encode($return);
+	}
 //$received_url = $_POST['url'];
 //Search in blackList.
+else{
 $query = "SELECT * FROM BlackList where LINK = '$received_url'";
 //Search in valid_list.
 $query2 = "SELECT * FROM WhiteList where SOURCE = '$received_url'";
@@ -29,6 +34,8 @@ else{
     echo json_encode($return);
 	}
 }
+}
+
 
 $connexion -> close();
 
