@@ -1,4 +1,5 @@
-<?php
+<?php 
+header('Access-Control-Allow-Origin: *');
 include 'connexion.php';
 
 $received_url = $_GET['url'];
