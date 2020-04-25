@@ -1,11 +1,25 @@
 <?php 
 include 'connexion.php';
-$word = $_POST['word'];
-//$word = "edjtgwogrjeoijhoerhgwoighegoirhOGWHRVOLDJIGOIEWJHGOWEHRJOGisdjofgiehwoigfhweoghjoivji";
+//$word1 =  $GET['word1'];
 
-if (isset($word)){
-$word = $word . " ";
-$query = "SELECT SOURCE from WhiteList where INFORMATION LIKE '%$word%' ";
+//$word2 =  $GET['word2'];
+//$word3 =  $GET['word3'];
+//$word4 =  $GET['word4'];
+//$word5 =  $GET['word5'];
+$word1 =  "University";
+$word2 =  "out";
+$word3 =  "Johns";
+$word4 = "updates";
+$word5 =  "public";
+//$word = "edjtgwogrjeoijhoerhgwoighegoirhOGWHRVOLDJIGOIEWJHGOWEHRJOGisdjofgiehwoigfhweoghjoivji";
+if (isset($word1) && isset($word2) && isset($word3) && isset($word4) && isset($word5) ){
+//$word1 = $wor1 . " ";
+//$word2 = $wor2 . " ";
+//$word3 = $wor3 . " ";
+//$word4 = $wor4 . " ";
+//$word5 = $wor5 . " ";
+
+$query = "SELECT SOURCE from WhiteList where INFORMATION LIKE '%$word1%' AND INFORMATION LIKE '%$word2%'AND INFORMATION LIKE '%$word3%' AND INFORMATION LIKE '%$word4%' AND INFORMATION LIKE '%$word5%'";
 $result = $connexion -> query($query);
 if (!mysqli_fetch_assoc($result)){
 	echo json_encode (json_decode ("{}"));
@@ -22,8 +36,6 @@ while($row = mysqli_fetch_assoc($result)){
 else{
 	echo json_encode (json_decode ("{}"));
 }
-
-
 
 $connexion->close();
  ?>

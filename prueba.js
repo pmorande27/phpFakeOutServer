@@ -1,5 +1,5 @@
 var req = new XMLHttpRequest();
-var url = "dggsg.com";
+var url = "dggsddg.com";
 var number;
 req.overrideMimeType(url);
 req.open('GET', "https://34.89.30.97/phpFakeOutServer/add_blacklist.php"+"?url="+url, true);
