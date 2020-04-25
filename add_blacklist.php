@@ -4,7 +4,10 @@ $url = $_POST['url'];
 //$url= "test";
 //$url = $_GET['url'];
 $Confirmed = 0;
-$query = "INSERT INTO BlackList (LINK,CONFIRMED)VALUES ('$url','$Confirmed')";
+if(isset($url)){
+	$query = "INSERT INTO BlackList (LINK,CONFIRMED)VALUES ('$url','$Confirmed')";
+}
+
 $result = $connexion->query($query);
 if($result){
 	$return = Array();
