@@ -1,9 +1,10 @@
 <?php 
 include 'connexion.php';
-//$word = $_POST['word'];
-$word = "edjtgwogrjeoijhoerhgwoighegoirhOGWHRVOLDJIGOIEWJHGOWEHRJOGisdjofgiehwoigfhweoghjoivji";
-$word = $word . " ";
+$word = $_POST['word'];
+//$word = "edjtgwogrjeoijhoerhgwoighegoirhOGWHRVOLDJIGOIEWJHGOWEHRJOGisdjofgiehwoigfhweoghjoivji";
+
 if (isset($word)){
+$word = $word . " ";
 $query = "SELECT SOURCE from WhiteList where INFORMATION LIKE '%$word%' ";
 $result = $connexion -> query($query);
 if (!mysqli_fetch_assoc($result)){
