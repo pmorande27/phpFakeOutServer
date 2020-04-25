@@ -2,7 +2,7 @@
 $hostname='localhost';
 $database ='test_data';
 $username = 'root';
-$password ='';
+$password ='fakeoffserver';
 
 $connexion =new mysqli($hostname,$username,$password, $database);
 if($connexion -> connect_errno){
