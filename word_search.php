@@ -2,7 +2,7 @@
 include 'connexion.php';
 //$word = $_POST['word'];
 $word = "edjtgwogrjeoijhoerhgwoighegoirhOGWHRVOLDJIGOIEWJHGOWEHRJOGisdjofgiehwoigfhweoghjoivji";
-$word = $word +" ";
+$word = $word;
 if (isset($word)){
 $query = "SELECT SOURCE from WhiteList where INFORMATION LIKE '%$word%' ";
 $result = $connexion -> query($query);
