@@ -1,7 +1,7 @@
 <?php
 include 'connexion.php';
-$received_url= "aaaaa";
-//$received_url = $_GET['url'];
+
+$received_url = $_GET['url'];
 
 //$received_url = $_POST['url'];
 //Search in blackList.
