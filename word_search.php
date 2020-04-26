@@ -21,15 +21,11 @@ if (isset($word1) && isset($word2) && isset($word3) && isset($word4) && isset($w
 
 $query ="SELECT SOURCE from WhiteList where INFORMATION LIKE '%University%' AND INFORMATION LIKE '%has%'AND INFORMATION LIKE '%out%' AND INFORMATION LIKE '%Johns%'AND INFORMATION LIKE '%public%'";
 $result = $connexion -> query($query);
-if (!mysqli_fetch_assoc($result)){
-	echo json_encode (json_decode ("{}"));
-}
-else{
+
 while($row = mysqli_fetch_assoc($result)){
 	$product[] = array_map('utf8_encode',$row);
 }
 	echo json_encode ($product);
-}
 }
 else{
 	echo json_encode (json_decode ("{}"));
