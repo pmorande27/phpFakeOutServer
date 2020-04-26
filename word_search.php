@@ -9,7 +9,7 @@ include 'connexion.php';
 $word1 =  "University";
 $word2 =  "out";
 $word3 =  "Johns";
-$word4 = "updates";
+$word4 = "has";
 $word5 =  "public";
 //$word = "edjtgwogrjeoijhoerhgwoighegoirhOGWHRVOLDJIGOIEWJHGOWEHRJOGisdjofgiehwoigfhweoghjoivji";
 if (isset($word1) && isset($word2) && isset($word3) && isset($word4) && isset($word5) ){
