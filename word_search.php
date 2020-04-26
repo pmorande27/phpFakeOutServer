@@ -19,17 +19,21 @@ if (isset($word1) && isset($word2) && isset($word3) && isset($word4) && isset($w
 //$word4 = $wor4 . " ";
 //$word5 = $wor5 . " ";
 
-$query ="SELECT SOURCE from WhiteList where INFORMATION LIKE '%University%' AND INFORMATION LIKE '%has%'AND INFORMATION LIKE '%out%' AND INFORMATION LIKE '%Johns%'AND INFORMATION LIKE '%public%'";
-$result = $connexion -> query($query);
 
-while($row = mysqli_fetch_assoc($result)){
-	$product[] = array_map('utf8_encode',$row);
-}
-	echo json_encode ($product);
-}
-else{
-	echo json_encode (json_decode ("{}"));
-}
+$query ="SELECT SOURCE from WhiteList where INFORMATION LIKE '%University%' AND INFORMATION LIKE '%has%'AND INFORMATION LIKE '%out%' AND INFORMATION LIKE '%saffafaffafffsff%'AND INFORMATION LIKE '%public%'";
+$result = $connexion -> query($query);
+	if($result->num_rows == 0)
+    {
+        echo json_encode (json_decode ("{}"));
+    }
+    else{
+    	while($row = mysqli_fetch_assoc($result)){
+			$product[] = array_map('utf8_encode',$row);
+		}
+		echo json_encode ($product);
+	}
+  }
+
 
 $connexion->close();
  ?>
