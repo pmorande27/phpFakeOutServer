@@ -20,7 +20,7 @@ if (isset($word1) && isset($word2) && isset($word3) && isset($word4) && isset($w
 //$word5 = $wor5 . " ";
 
 
-$query ="SELECT SOURCE from WhiteList where INFORMATION LIKE '%University%' AND INFORMATION LIKE '%has%'AND INFORMATION LIKE '%out%' AND INFORMATION LIKE '%saffafaffafffsff%'AND INFORMATION LIKE '%public%'";
+$query ="SELECT SOURCE from WhiteList where INFORMATION LIKE '%University%' AND INFORMATION LIKE '%has%'AND INFORMATION LIKE '%out%' AND INFORMATION LIKE '%Johns%'AND INFORMATION LIKE '%public%'";
 $result = $connexion -> query($query);
 	if($result->num_rows == 0)
     {
