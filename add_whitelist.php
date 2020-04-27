@@ -8,10 +8,9 @@ include 'connexion.php';
 $url = "aaa";
 $text = "aaa";
 $title = "dgg";
-$query = "INSERT INTO WhiteList (SOURCE,TITLE,INFORMATION) VALUES ('$url','$title',$text')";
+$query = "INSERT INTO WhiteList (SOURCE,TITLE,INFORMATION) VALUES ('$url','$title','$text')";
 if (isset($url)&&isset($text)&&isset($title)){
 	$result = $connexion->query($query);
-	echo $result;
 if($result){
 	$return = Array();
     $return["success"] = true;
