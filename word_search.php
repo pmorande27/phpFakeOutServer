@@ -1,5 +1,7 @@
 <?php 
 include 'connexion.php';
+header('Access-Control-Allow-Origin: *');
+
 $word1 =  $GET['word1'];
 $word2 =  $GET['word2'];
 $word3 =  $GET['word3'];
