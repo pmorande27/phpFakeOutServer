@@ -1,13 +1,13 @@
 <?php 
-header('Access-Control-Allow-Origin: *');
 
+header('Access-Control-Allow-Origin: *');
 include 'connexion.php';
 
-$word1 =  $GET['word1'];
-$word2 =  $GET['word2'];
-$word3 =  $GET['word3'];
-$word4 =  $GET['word4'];
-$word5 =  $GET['word5'];
+$word1 =  $_GET['word1'];
+$word2 =  $_GET['word2'];
+$word3 =  $_GET['word3'];
+$word4 =  $_GET['word4'];
+$word5 =  $_GET['word5'];
 //$word1 =  "University";
 //$word2 =  "out";
 //$word3 =  "Johns";
