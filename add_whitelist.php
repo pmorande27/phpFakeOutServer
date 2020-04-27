@@ -2,12 +2,10 @@
 header('Access-Control-Allow-Origin: *');
 
 include 'connexion.php';
-//$url = $_GET['url'];
-//$text = $_GET['text'];
-//$title = $_GET['title'];
-$url = "aaa";
-$text = "aaa";
-$title = "dgg";
+$url = $_GET['url'];
+$text = $_GET['text'];
+$title = $_GET['title'];
+
 $query = "INSERT INTO WhiteList (SOURCE,TITLE,INFORMATION) VALUES ('$url','$title','$text')";
 if (isset($url)&&isset($text)&&isset($title)){
 	$result = $connexion->query($query);
